@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+let numeroPensado = Math.floor(Math.random() * 11);
+let palpite = prompt ("Pensei em um número de 0 a 10, tente adivinhar! Qual é o número?");
+let tentativas = 0;
+
+while (tentativas < 2) {
+    if (palpite == numeroPensado) {
+    alert ("Parabéns, você acertou!");
+    break
+    } else {
+        tentativas++;
+        let chancesRestantes = 3 - tentativas;
+        alert ("Você errou, tente novamente! Chances restantes: " + chancesRestantes);
+                palpite = prompt ("Digite seu novo palpite!");
+                if (palpite == numeroPensado) {
+                alert ("Parabéns, você acertou!");
+                }   else if (tentativas == 2){
+                    alert ("Suas chances se esgotaram. O número era " + numeroPensado);
+                    }
+    }
+}
+
+</script>

@@ -7,15 +7,19 @@ let linguagem = "";
 let area = prompt ("Qual área deseja seguir? Front-End ou Back-End");
 	if (area === "Front-End"){
 		linguagem = prompt ("Você pode aprender React ou Vue? Qual linguagem deseja aprender?");
-	} if (area === "Back-End"){
+	} else if (area === "Back-End"){
 		linguagem = prompt ("Você pode aprender C# ou Java? Qual linguem deseja aprender?")
+	} else {
+		alert("Você não digitou nenhuma linguagem válida!")
 	}
 
 const novaPergunta = prompt ("Você deseja seguir se especilizando ainda mais na área escolhida ou prefere seguir se desenvolvendo para se tornar Fullstack? Responda Especializar ou Fullstack");
 	if (novaPergunta === "Especializar") {
 		alert ("Ser um especialista leva muito tempo, continue estudando.");
-	} if (novaPergunta === "Fullstack") {
+	} else if (novaPergunta === "Fullstack") {
 		alert ("Irão te chamar de pato. Ignore e continue seus estudos.");
+	} else {
+		alert ("Essa não é uma resposta válida");
 	}
 
 let perguntaCinco = "ok";
