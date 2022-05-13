@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<script>
+
+	let pergunta = prompt ("Deseja adicionar uma comida na sua lista de compras? sim ou não?");
+	let produto = "";
+	let categoria = "";
+	let frutas = [];
+	let laticinios = [];
+	let congelados = [];
+	let doces = [];
+
+	while (pergunta == "sim"){
+		produto = prompt ("Qual comida você deseja inserir?")
+		categoria = prompt (`Em qual categoria essa comida se encaixa? frutas | laticinios | congelados | doces`);
+			if (categoria == "frutas") {
+				frutas.push (produto);
+				console.log (frutas);
+			} else if (categoria == "laticinios") {
+				laticinios.push (produto);
+				} else if (categoria == "congelados") {
+					congelados.push (produto);
+				} else if (categoria == "doces") {
+					doces.push (produto);
+				}
+		pergunta = prompt ("Deseja adicionar uma comida na sua lista de compras? sim ou não?");
+	}
+
+	alert (`Lista de Compras: Frutas: ${frutas} | Laticinios: ${laticinios} | Congelados: ${congelados} | Doces: ${doces}`);
+
+</script>
