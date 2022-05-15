@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<script>
+  let operacao = prompt ("Escolha uma operação: soma, subtração, multiplicação, divisão ou sair");
+  if (operacao == "sair"){
+    alert ("Até a próxima")
+  } else {
+    let a = parseFloat (prompt ("Insira o primeiro elemento:"));
+    let b = parseFloat (prompt ("Insira o segundo elemento:"));
+    resultado = calculadora(operacao, a, b);
+    alert(`O resultado da operação é ${resultado}`);
+  }
+  
+function calculadora (operacao, a, b) {
+  let resultado = 0;
+  switch (operacao) {
+    case "soma":
+    resultado = soma (a, b);
+    break;
+    case "subtração":
+    case "subtracao":
+    resultado = subtrai (a, b);
+    break;
+    case "multiplicação":
+    case "multiplicacao":
+    resultado = multiplica (a, b);
+    break;
+    case "divisão":
+    case "divisao":
+    resultado = divide (a, b);
+    break;
+    default:
+    alert("Não foi possível fazer o cálcula porque esse não é um comando válido");
+  }
+  return resultado
+}
+
+function soma (a,b) {
+  return a + b;
+}
+
+function subtrai (a,b) {
+  return a - b;
+}
+
+function multiplica (a,b) {
+  return a * b;
+}
+
+function divide (a,b) {
+  return a / b;
+}
+
+</script>
